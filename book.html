@@ -1,0 +1,1244 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <title>Booking Rate</title>
+    <link rel="shortcut icon" href="Image/logo.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/booking.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-database.js"></script>  
+
+  </head>
+  <body> 
+
+  
+   <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">DREAM HOTEL</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav ml-auto">
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Language
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#">English</a>
+            <a class="dropdown-item" href="#">Persian</a>
+            <a class="dropdown-item" href="#">French</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+   <div class="container-fluid con">
+     <div class="row">
+       <div class="col-lg-12">
+         <img src="Image/12.jpg" alt="" width="100%" height="auto">
+       </div>
+     </div>
+   </div>
+
+
+
+
+        <div class="container-fluid cn1">
+          <div class="row">
+            <div class="col-lg-9">
+              <div class="card">
+                <div class="card-body w-100">
+                  <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-lg-3">
+                      <div id="carousel-example-1" class="carousel slide carousel-fade" data-ride="carousel">
+                        <div class="carousel-inner" role="listbox">
+                          <div class="carousel-item active">
+                            <div class="view">
+                              <img class="d-block w-100" src="Image/mini/a.jpg"
+                              alt="First slide">
+                              <div class="mask rgba-black-light"></div>
+                            </div>
+                          </div>
+                          <div class="carousel-item">
+                            <div class="view">
+                              <img class="d-block w-100" src="Image/mini/b.jpg"
+                              alt="Second slide">
+                              <div class="mask rgba-black-strong"></div>
+                            </div>
+                          </div>
+                          <div class="carousel-item">
+                            <div class="view">
+                              <img class="d-block w-100" src="Image/mini/asdf.jpg"
+                              alt="Second slide">
+                              <div class="mask rgba-black-strong"></div>
+                            </div>
+                          </div>
+
+                        </div>
+                        <a class="carousel-control-prev" href="#carousel-example-1" role="button" data-slide="prev">
+                          <span class="fa fa-angle-left fa-2x" aria-hidden="true"></span>
+                          <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carousel-example-1" role="button" data-slide="next">
+                          <span class="fa fa-angle-right fa-2x" aria-hidden="true"></span>
+                          <span class="sr-only">Next</span>
+                        </a>
+                      </div>
+                </div>
+                    <div class="col-lg-6">
+                      <div class="display-4">Deluxe Double Room</div>
+                      <br>
+                      <p class="lead">
+                        This double room has a flat-screen TV, sofa and air conditioning.
+                      </p>
+                      <!-- Button trigger modal -->
+                      <a href="" data-toggle="modal" data-target="#exampleModal-1" >
+                        More Information
+                      </a>
+                      <!-- Modal -->
+                      <div class="modal fade" id="exampleModal-1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">Deluxe Double Room</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                              <div class="alt-heading-primary">
+                                <span class="ng-binding">Description</span>
+                              </div>
+                              <p class="lead" align="center">
+                                This double room has a flat-screen TV, sofa and air conditioning.
+                              </p>
+                              <div class="alt-heading-primary">
+                                <span class="ng-binding">Amenities</span>
+                              </div>
+
+                                <div class="container">
+                                  <div class="row">
+                                    <div class="col-lg-6">
+                                      <i class="fa fa-wifi"></i><span class="ft">Internet Access</span><br>
+                                      <i class="fas fa-tv"></i><span class="ft">Television</span><br>
+                                      <i class="fas fa-toilet-paper"></i><span class="ft"> Services</span><br>
+                                      <i class="fas fa-wheelchair"></i><span class="ft"> Handicap</span><br>
+                                      <i class="fas fa-video"></i><span class="ft"> Movies Collection</span><br>
+                                      <i class="fas fa-satellite-dish"></i><span class="ft"> Sattalite TV</span><br>
+                                      <i class="far fa-newspaper"></i><span class="ft"> Newspaper</span><br>
+                                      <i class="fas fa-tshirt"></i><span class="ft">Iron clothes</span><br>
+                                    </div>
+                                    <div class="col-lg-6">
+                                      <i class="fas fa-lock"></i><span class="ft">Room Safe</span><br>
+                                      <i class="fas fa-phone-alt"></i><span class="ft">Telephone</span><br>
+                                      <i class="fas fa-shower"></i><span class="ft">Shower - Separate</span><br>
+                                      <i class="fas fa-person-booth"></i><span class="ft">Linen and Towels Provided</span><br>
+                                      <i class="far fa-snowflake"></i><span class="ft"> Air Conditioned</span><br>
+                                      <i class="fas fa-utensils"></i><span class="ft"> Room Services</span><br>
+                                      <i class="fas fa-swimmer"></i><span class="ft">Swimming pool</span><br>
+                                      <i class="fas fa-dumbbell"></i><span class="ft">Gym</span><br>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                      <div class="col-lg-3">
+                        <br>
+                        <div class="bk" align="right">
+                          <p class="rate"> USD 83.62</p>
+
+                          <button id="rate1" class="btn btn-outline-primary">Show Rate ▼</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="open-rate1">
+                <div class="card-header w-100 border-top">
+                  <div class="container cn3">
+                        <div class="row">
+                          <div class="col-lg-4">
+                            <div>Rates</div>
+                          </div>
+                          <div class="col-lg-3">
+                            <i class="fas fa-user"></i>
+                          </div>
+                          <div class="col-lg-5">
+                            <div>Total</div>
+                          </div>
+                        </div>
+                      </div>
+                   </div>
+                <div class="card-body border-top">
+                  <div class="containter">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-6">
+                         <p class="ctgry">Advance Purchase Room</p>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-3 col-4">
+                          <div class="acpncy">2x <i class="fas fa-user"></i>(Max.)</div>
+                        </div>
+                        <div class="col-lg-2 col-md-1 col-sm-1 col-2">
+                        <a href=""><i class="fas fa-info-circle"></i></a>
+                        </div>
+                        <div class="col-lg-2">
+                          <p class="rate">USD 83.62</p>
+                        </div>
+                        <div class="col-lg-2">
+                          <button class="btn btn-secondary" onclick="window.location.href='process.html'">Book Now</button>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-body border-top">
+                  <div class="containter">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-6">
+                         <p class="ctgry">Non-Refundable Room</p>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-3 col-4">
+                          <div class="acpncy">2x <i class="fas fa-user"></i>(Max.)</div>
+                        </div>
+                        <div class="col-lg-2 col-md-1 col-sm-1 col-2">
+                        <a href=""><i class="fas fa-info-circle"></i></a>
+                        </div>
+                        <div class="col-lg-2">
+                          <p class="rate">USD 86.67</p>
+                        </div>
+                        <div class="col-lg-2">
+                          <button class="btn btn-secondary" onclick="window.location.href='process.html'">Book Now</button>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-body border-top">
+                  <div class="containter">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-6">
+                         <p class="ctgry">Room with Breakfast</p>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-3 col-4">
+                          <div class="acpncy">2x <i class="fas fa-user"></i>(Max.)</div>
+                        </div>
+                        <div class="col-lg-2 col-md-1 col-sm-1 col-2">
+                        <a href=""><i class="fas fa-info-circle"></i></a>
+                        </div>
+                        <div class="col-lg-2">
+                          <p class="rate">USD 101.60</p>
+                        </div>
+                        <div class="col-lg-2">
+                          <button class="btn btn-secondary" onclick="window.location.href='process.html'">Book Now</button>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body w-100">
+                  <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-lg-3">
+                      <div id="carousel-example-2" class="carousel slide carousel-fade" data-ride="carousel">
+                        <div class="carousel-inner" role="listbox">
+                          <div class="carousel-item active">
+                            <div class="view">
+                              <img class="d-block w-100" src="Image/mini/b.jpg"
+                              alt="First slide">
+                              <div class="mask rgba-black-light"></div>
+                            </div>
+                          </div>
+                          <div class="carousel-item">
+                            <div class="view">
+                              <img class="d-block w-100" src="Image/mini/asdf.jpg"
+                              alt="Second slide">
+                              <div class="mask rgba-black-strong"></div>
+                            </div>
+                          </div>
+                          <div class="carousel-item">
+                            <div class="view">
+                              <img class="d-block w-100" src="Image/mini/a.jpg"
+                              alt="Second slide">
+                              <div class="mask rgba-black-strong"></div>
+                            </div>
+                          </div>
+
+                        </div>
+                        <a class="carousel-control-prev" href="#carousel-example-2" role="button" data-slide="prev">
+                          <span class="fa fa-angle-left fa-2x" aria-hidden="true"></span>
+                          <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carousel-example-2" role="button" data-slide="next">
+                          <span class="fa fa-angle-right fa-2x" aria-hidden="true"></span>
+                          <span class="sr-only">Next</span>
+                        </a>
+                      </div>
+                </div>
+                    <div class="col-lg-6">
+                      <div class="display-4">Deluxe Twin Room</div>
+                      <br>
+                      <p class="lead">
+                        This twin room features air conditioning, satellite TV and electric kettle.
+                      </p>
+                      <!-- Button trigger modal -->
+                      <a href="" data-toggle="modal" data-target="#exampleModal-2" >
+                        More Information
+                      </a>
+                      <!-- Modal -->
+                      <div class="modal fade" id="exampleModal-2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">Deluxe Twin Room</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                              <div class="alt-heading-primary">
+                                <span class="ng-binding">Description</span>
+                              </div>
+                              <p class="lead" align="center">
+                                This twin room features air conditioning, satellite TV and electric kettle.
+                              </p>
+                              <div class="alt-heading-primary">
+                                <span class="ng-binding">Amenities</span>
+                              </div>
+
+                                <div class="container">
+                                  <div class="row">
+                                    <div class="col-lg-6">
+                                      <i class="fa fa-wifi"></i><span class="ft">Internet Access</span><br>
+                                      <i class="fas fa-tv"></i><span class="ft">Television</span><br>
+                                      <i class="fas fa-toilet-paper"></i><span class="ft"> Services</span><br>
+                                      <i class="fas fa-wheelchair"></i><span class="ft"> Handicap</span><br>
+                                      <i class="fas fa-video"></i><span class="ft"> Movies Collection</span><br>
+                                      <i class="fas fa-satellite-dish"></i><span class="ft"> Sattalite TV</span><br>
+                                      <i class="far fa-newspaper"></i><span class="ft"> Newspaper</span><br>
+                                      <i class="fas fa-tshirt"></i><span class="ft">Iron clothes</span><br>
+                                    </div>
+                                    <div class="col-lg-6">
+                                      <i class="fas fa-lock"></i><span class="ft">Room Safe</span><br>
+                                      <i class="fas fa-phone-alt"></i><span class="ft">Telephone</span><br>
+                                      <i class="fas fa-shower"></i><span class="ft">Shower - Separate</span><br>
+                                      <i class="fas fa-person-booth"></i><span class="ft">Linen and Towels Provided</span><br>
+                                      <i class="far fa-snowflake"></i><span class="ft"> Air Conditioned</span><br>
+                                      <i class="fas fa-utensils"></i><span class="ft"> Room Services</span><br>
+                                      <i class="fas fa-swimmer"></i><span class="ft">Swimming pool</span><br>
+                                      <i class="fas fa-dumbbell"></i><span class="ft">Gym</span><br>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                      <div class="col-lg-3">
+                        <br>
+                        <div class="bk" align="right">
+                          <p class="rate"> USD 83.62</p>
+                          <button id="rate2" class="btn btn-outline-primary">Show Rate ▼</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="open-rate2">
+                <div class="card-header w-100 border-top">
+                  <div class="container cn3">
+                        <div class="row">
+                          <div class="col-lg-4">
+                            <div>Rates</div>
+                          </div>
+                          <div class="col-lg-3">
+                            <i class="fas fa-user"></i>
+                          </div>
+                          <div class="col-lg-5">
+                            <div>Total</div>
+                          </div>
+                        </div>
+                      </div>
+                   </div>
+                <div class="card-body border-top">
+                  <div class="containter">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-6">
+                         <p class="ctgry">Advance Purchase Room</p>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-3 col-4">
+                          <div class="acpncy">2x <i class="fas fa-user"></i>(Max.)</div>
+                        </div>
+                        <div class="col-lg-2 col-md-1 col-sm-1 col-2">
+                        <a href=""><i class="fas fa-info-circle"></i></a>
+                        </div>
+                        <div class="col-lg-2">
+                          <p class="rate">USD 83.62</p>
+                        </div>
+                        <div class="col-lg-2">
+                          <button class="btn btn-secondary" onclick="window.location.href='process.html'">Book Now</button>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-body border-top">
+                  <div class="containter">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-6">
+                         <p class="ctgry">Non-Refundable Room</p>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-3 col-4">
+                          <div class="acpncy">2x <i class="fas fa-user"></i>(Max.)</div>
+                        </div>
+                        <div class="col-lg-2 col-md-1 col-sm-1 col-2">
+                        <a href=""><i class="fas fa-info-circle"></i></a>
+                        </div>
+                        <div class="col-lg-2">
+                          <p class="rate">USD 86.60</p>
+                        </div>
+                        <div class="col-lg-2">
+                          <button class="btn btn-secondary" onclick="window.location.href='process.html'">Book Now</button>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-body border-top">
+                  <div class="containter">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-6">
+                         <p class="ctgry">Room with Breakfast</p>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-3 col-4">
+                          <div class="acpncy">2x <i class="fas fa-user"></i>(Max.)</div>
+                        </div>
+                        <div class="col-lg-2 col-md-1 col-sm-1 col-2">
+                        <a href=""><i class="fas fa-info-circle"></i></a>
+                        </div>
+                        <div class="col-lg-2">
+                          <p class="rate">USD 101.60</p>
+                        </div>
+                        <div class="col-lg-2">
+                          <button class="btn btn-secondary" onclick="window.location.href='process.html'">Book Now</button>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body w-100">
+                  <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-lg-3">
+                      <div id="carousel-example-3" class="carousel slide carousel-fade" data-ride="carousel">
+                        <div class="carousel-inner" role="listbox">
+                          <div class="carousel-item active">
+                            <div class="view">
+                              <img class="d-block w-100" src="Image/mini/c.jpg"
+                              alt="First slide">
+                              <div class="mask rgba-black-light"></div>
+                            </div>
+                          </div>
+                          <div class="carousel-item">
+                            <div class="view">
+                              <img class="d-block w-100" src="Image/mini/e.jpg"
+                              alt="Second slide">
+                              <div class="mask rgba-black-strong"></div>
+                            </div>
+                          </div>
+                          <div class="carousel-item">
+                            <div class="view">
+                              <img class="d-block w-100" src="Image/mini/d.jpg"
+                              alt="Second slide">
+                              <div class="mask rgba-black-strong"></div>
+                            </div>
+                          </div>
+
+                        </div>
+                        <a class="carousel-control-prev" href="#carousel-example-3" role="button" data-slide="prev">
+                          <span class="fa fa-angle-left fa-2x" aria-hidden="true"></span>
+                          <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carousel-example-3" role="button" data-slide="next">
+                          <span class="fa fa-angle-right fa-2x" aria-hidden="true"></span>
+                          <span class="sr-only">Next</span>
+                        </a>
+                      </div>
+                </div>
+                    <div class="col-lg-6">
+                      <div class="display-4">Executive Double Suite</div>
+                      <br>
+                      <p class="lead">
+                        37m2 spacious comfortable Room with separate sitting and working desk.
+                      </p>
+                      <!-- Button trigger modal -->
+                      <a href="" data-toggle="modal" data-target="#exampleModal-3" >
+                        More Information
+                      </a>
+                      <!-- Modal -->
+                      <div class="modal fade" id="exampleModal-3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">Executive Double Suite</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                              <div class="alt-heading-primary">
+                                <span class="ng-binding">Description</span>
+                              </div>
+                              <p class="lead" align="center">
+                                37m2 spacious comfortable Room with separate sitting and working desk
+                              </p>
+                              <div class="alt-heading-primary">
+                                <span class="ng-binding">Amenities</span>
+                              </div>
+
+                                <div class="container">
+                                  <div class="row">
+                                    <div class="col-lg-6">
+                                      <i class="fa fa-wifi"></i><span class="ft">Internet Access</span><br>
+                                      <i class="fas fa-tv"></i><span class="ft">Television</span><br>
+                                      <i class="fas fa-toilet-paper"></i><span class="ft"> Services</span><br>
+                                      <i class="fas fa-wheelchair"></i><span class="ft"> Handicap</span><br>
+                                      <i class="fas fa-video"></i><span class="ft"> Movies Collection</span><br>
+                                      <i class="fas fa-satellite-dish"></i><span class="ft"> Sattalite TV</span><br>
+                                      <i class="far fa-newspaper"></i><span class="ft"> Newspaper</span><br>
+                                      <i class="fas fa-tshirt"></i><span class="ft">Iron clothes</span><br>
+                                    </div>
+                                    <div class="col-lg-6">
+                                      <i class="fas fa-lock"></i><span class="ft">Room Safe</span><br>
+                                      <i class="fas fa-phone-alt"></i><span class="ft">Telephone</span><br>
+                                      <i class="fas fa-shower"></i><span class="ft">Shower - Separate</span><br>
+                                      <i class="fas fa-person-booth"></i><span class="ft">Linen and Towels Provided</span><br>
+                                      <i class="far fa-snowflake"></i><span class="ft"> Air Conditioned</span><br>
+                                      <i class="fas fa-utensils"></i><span class="ft"> Room Services</span><br>
+                                      <i class="fas fa-swimmer"></i><span class="ft">Swimming pool</span><br>
+                                      <i class="fas fa-dumbbell"></i><span class="ft">Gym</span><br>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                      <div class="col-lg-3">
+                        <br>
+                        <div class="bk" align="right">
+                          <p class="rate"> USD 98.72</p>
+                          <button id="rate3" class="btn btn-outline-primary">Show Rate ▼</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="open-rate3">
+                <div class="card-header w-100 border-top">
+                  <div class="container cn3">
+                        <div class="row">
+                          <div class="col-lg-4">
+                            <div>Rates</div>
+                          </div>
+                          <div class="col-lg-3">
+                            <i class="fas fa-user"></i>
+                          </div>
+                          <div class="col-lg-5">
+                            <div>Total</div>
+                          </div>
+                        </div>
+                      </div>
+                   </div>
+                <div class="card-body border-top">
+                  <div class="containter">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-6">
+                         <p class="ctgry">Advance Purchase Room</p>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-3 col-4">
+                          <div class="acpncy">2x <i class="fas fa-user"></i>(Max.)</div>
+                        </div>
+                        <div class="col-lg-2 col-md-1 col-sm-1 col-2">
+                        <a href=""><i class="fas fa-info-circle"></i></a>
+                        </div>
+                        <div class="col-lg-2">
+                          <p class="rate">USD 98.72</p>
+                        </div>
+                        <div class="col-lg-2">
+                          <button class="btn btn-secondary" onclick="window.location.href='process.html'">Book Now</button>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-body border-top">
+                  <div class="containter">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-6">
+                         <p class="ctgry">Non-Refundable Room</p>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-3 col-4">
+                          <div class="acpncy">2x <i class="fas fa-user"></i>(Max.)</div>
+                        </div>
+                        <div class="col-lg-2 col-md-1 col-sm-1 col-2">
+                        <a href=""><i class="fas fa-info-circle"></i></a>
+                        </div>
+                        <div class="col-lg-2">
+                          <p class="rate">USD 104.89</p>
+                        </div>
+                        <div class="col-lg-2">
+                          <button class="btn btn-secondary" onclick="window.location.href='process.html'">Book Now</button>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-body border-top">
+                  <div class="containter">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-6">
+                         <p class="ctgry">Room with Breakfast</p>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-3 col-4">
+                          <div class="acpncy">2x <i class="fas fa-user"></i>(Max.)</div>
+                        </div>
+                        <div class="col-lg-2 col-md-1 col-sm-1 col-2">
+                        <a href=""><i class="fas fa-info-circle"></i></a>
+                        </div>
+                        <div class="col-lg-2">
+                          <p class="rate">USD 123.69</p>
+                        </div>
+                        <div class="col-lg-2">
+                          <button class="btn btn-secondary" onclick="window.location.href='process.html'">Book Now</button>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body w-100">
+                  <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-lg-3">
+                      <div id="carousel-example-4" class="carousel slide carousel-fade" data-ride="carousel">
+                        <div class="carousel-inner" role="listbox">
+                          <div class="carousel-item active">
+                            <div class="view">
+                              <img class="d-block w-100" src="Image/mini/d.jpg"
+                              alt="First slide">
+                              <div class="mask rgba-black-light"></div>
+                            </div>
+                          </div>
+                          <div class="carousel-item">
+                            <div class="view">
+                              <img class="d-block w-100" src="Image/mini/c.jpg"
+                              alt="Second slide">
+                              <div class="mask rgba-black-strong"></div>
+                            </div>
+                          </div>
+                          <div class="carousel-item">
+                            <div class="view">
+                              <img class="d-block w-100" src="Image/mini/e.jpg"
+                              alt="Second slide">
+                              <div class="mask rgba-black-strong"></div>
+                            </div>
+                          </div>
+
+                        </div>
+                        <a class="carousel-control-prev" href="#carousel-example-4" role="button" data-slide="prev">
+                          <span class="fa fa-angle-left fa-2x" aria-hidden="true"></span>
+                          <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carousel-example-4" role="button" data-slide="next">
+                          <span class="fa fa-angle-right fa-2x" aria-hidden="true"></span>
+                          <span class="sr-only">Next</span>
+                        </a>
+                      </div>
+                </div>
+                    <div class="col-lg-6">
+                      <div class="display-4">Executive Twins Suite</div>
+                      <br>
+                      <p class="lead">
+                        37m2 spacious comfortable Room with separate sitting and working desk.
+                      </p>
+                      <!-- Button trigger modal -->
+                      <a href="" data-toggle="modal" data-target="#exampleModal-4" >
+                        More Information
+                      </a>
+                      <!-- Modal -->
+                      <div class="modal fade" id="exampleModal-4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">Executive Twin Suite</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                              <div class="alt-heading-primary">
+                                <span class="ng-binding">Description</span>
+                              </div>
+                              <p class="lead" align="center">
+                                37m2 spacious comfortable Room with separate sitting and working desk
+                              </p>
+                              <div class="alt-heading-primary">
+                                <span class="ng-binding">Amenities</span>
+                              </div>
+
+                                <div class="container">
+                                  <div class="row">
+                                    <div class="col-lg-6">
+                                      <i class="fa fa-wifi"></i><span class="ft">Internet Access</span><br>
+                                      <i class="fas fa-tv"></i><span class="ft">Television</span><br>
+                                      <i class="fas fa-toilet-paper"></i><span class="ft"> Services</span><br>
+                                      <i class="fas fa-wheelchair"></i><span class="ft"> Handicap</span><br>
+                                      <i class="fas fa-video"></i><span class="ft"> Movies Collection</span><br>
+                                      <i class="fas fa-satellite-dish"></i><span class="ft"> Sattalite TV</span><br>
+                                      <i class="far fa-newspaper"></i><span class="ft"> Newspaper</span><br>
+                                      <i class="fas fa-tshirt"></i><span class="ft">Iron clothes</span><br>
+                                    </div>
+                                    <div class="col-lg-6">
+                                      <i class="fas fa-lock"></i><span class="ft">Room Safe</span><br>
+                                      <i class="fas fa-phone-alt"></i><span class="ft">Telephone</span><br>
+                                      <i class="fas fa-shower"></i><span class="ft">Shower - Separate</span><br>
+                                      <i class="fas fa-person-booth"></i><span class="ft">Linen and Towels Provided</span><br>
+                                      <i class="far fa-snowflake"></i><span class="ft"> Air Conditioned</span><br>
+                                      <i class="fas fa-utensils"></i><span class="ft"> Room Services</span><br>
+                                      <i class="fas fa-swimmer"></i><span class="ft">Swimming pool</span><br>
+                                      <i class="fas fa-dumbbell"></i><span class="ft">Gym</span><br>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                      <div class="col-lg-3">
+                        <br>
+                        <div class="bk" align="right">
+                          <p class="rate"> USD 98.72</p>
+                          <button id="rate4" class="btn btn-outline-primary">Show Rate ▼</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="open-rate4">
+                <div class="card-header w-100 border-top">
+                  <div class="container cn3">
+                        <div class="row">
+                          <div class="col-lg-4">
+                            <div>Rates</div>
+                          </div>
+                          <div class="col-lg-3">
+                            <i class="fas fa-user"></i>
+                          </div>
+                          <div class="col-lg-5">
+                            <div>Total</div>
+                          </div>
+                        </div>
+                      </div>
+                   </div>
+                <div class="card-body border-top">
+                  <div class="containter">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-6">
+                         <p class="ctgry">Advance Purchase Room</p>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-3 col-4">
+                          <div class="acpncy">2x <i class="fas fa-user"></i>(Max.)</div>
+                        </div>
+                        <div class="col-lg-2 col-md-1 col-sm-1 col-2">
+                        <a href=""><i class="fas fa-info-circle"></i></a>
+                        </div>
+                        <div class="col-lg-2">
+                          <p class="rate">USD 98.72</p>
+                        </div>
+                        <div class="col-lg-2">
+                          <button class="btn btn-secondary" onclick="window.location.href='process.html'">Book Now</button>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-body border-top">
+                  <div class="containter">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-6">
+                         <p class="ctgry">Non-Refundable Room</p>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-3 col-4">
+                          <div class="acpncy">2x <i class="fas fa-user"></i>(Max.)</div>
+                        </div>
+                        <div class="col-lg-2 col-md-1 col-sm-1 col-2">
+                        <a href=""><i class="fas fa-info-circle"></i></a>
+                        </div>
+                        <div class="col-lg-2">
+                          <p class="rate">USD 104.89</p>
+                        </div>
+                        <div class="col-lg-2">
+                          <button class="btn btn-secondary" onclick="window.location.href='process.html'">Book Now</button>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-body border-top">
+                  <div class="containter">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-6">
+                         <p class="ctgry">Room with Breakfast</p>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-3 col-4">
+                          <div class="acpncy">2x <i class="fas fa-user"></i>(Max.)</div>
+                        </div>
+                        <div class="col-lg-2 col-md-1 col-sm-1 col-2">
+                        <a href=""><i class="fas fa-info-circle"></i></a>
+                        </div>
+                        <div class="col-lg-2">
+                          <p class="rate">USD 123.69</p>
+                        </div>
+                        <div class="col-lg-2">
+                          <button class="btn btn-secondary" onclick="window.location.href='process.html'">Book Now</button>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body w-100">
+                  <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-lg-3">
+                      <div id="carousel-example-5" class="carousel slide carousel-fade" data-ride="carousel">
+                        <div class="carousel-inner" role="listbox">
+                          <div class="carousel-item active">
+                            <div class="view">
+                              <img class="d-block w-100" src="Image/mini/g.jpg"
+                              alt="First slide">
+                              <div class="mask rgba-black-light"></div>
+                            </div>
+                          </div>
+                          <div class="carousel-item">
+                            <div class="view">
+                              <img class="d-block w-100" src="Image/mini/h.jpg"
+                              alt="Second slide">
+                              <div class="mask rgba-black-strong"></div>
+                            </div>
+                          </div>
+                          <div class="carousel-item">
+                            <div class="view">
+                              <img class="d-block w-100" src="Image/mini/i.jpg"
+                              alt="Second slide">
+                              <div class="mask rgba-black-strong"></div>
+                            </div>
+                          </div>
+                          <div class="carousel-item">
+                            <div class="view">
+                              <img class="d-block w-100" src="Image/mini/j.jpg"
+                              alt="Second slide">
+                              <div class="mask rgba-black-strong"></div>
+                            </div>
+                          </div>
+                          <div class="carousel-item">
+                            <div class="view">
+                              <img class="d-block w-100" src="Image/mini/k.jpg"
+                              alt="Second slide">
+                              <div class="mask rgba-black-strong"></div>
+                            </div>
+                          </div>
+                          <div class="carousel-item">
+                            <div class="view">
+                              <img class="d-block w-100" src="Image/mini/l.jpg"
+                              alt="Second slide">
+                              <div class="mask rgba-black-strong"></div>
+                            </div>
+                          </div>
+
+                        </div>
+                        <a class="carousel-control-prev" href="#carousel-example-5" role="button" data-slide="prev">
+                          <span class="fa fa-angle-left fa-2x" aria-hidden="true"></span>
+                          <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carousel-example-5" role="button" data-slide="next">
+                          <span class="fa fa-angle-right fa-2x" aria-hidden="true"></span>
+                          <span class="sr-only">Next</span>
+                        </a>
+                      </div>
+                </div>
+                    <div class="col-lg-6">
+                      <div class="display-4">Royal Suite</div>
+                      <br>
+                      <p class="lead">
+                        Large spacious room of 75m2 with a large Comfortable Double Bed, Jacuzzi, Extra Large LED TV and other amenities
+                      </p>
+                      <!-- Button trigger modal -->
+                      <a href="" data-toggle="modal" data-target="#exampleModal-5" >
+                        More Information
+                      </a>
+                      <!-- Modal -->
+                      <div class="modal fade" id="exampleModal-5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">Royal Suite</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                              <div class="alt-heading-primary">
+                                <span class="ng-binding">Description</span>
+                              </div>
+                              <p class="lead" align="center">
+                                Large spacious room of 75m2 with a large Comfortable Double Bed, Jacuzzi, Extra Large LED TV and other amenities
+                              </p>
+                              <div class="alt-heading-primary">
+                                <span class="ng-binding">Amenities</span>
+                              </div>
+
+                                <div class="container">
+                                  <div class="row">
+                                    <div class="col-lg-6">
+                                      <i class="fa fa-wifi"></i><span class="ft">Internet Access</span><br>
+                                      <i class="fas fa-tv"></i><span class="ft">Television</span><br>
+                                      <i class="fas fa-toilet-paper"></i><span class="ft"> Services</span><br>
+                                      <i class="fas fa-wheelchair"></i><span class="ft"> Handicap</span><br>
+                                      <i class="fas fa-video"></i><span class="ft"> Movies Collection</span><br>
+                                      <i class="fas fa-satellite-dish"></i><span class="ft"> Sattalite TV</span><br>
+                                      <i class="far fa-newspaper"></i><span class="ft"> Newspaper</span><br>
+                                      <i class="fas fa-tshirt"></i><span class="ft">Iron clothes</span><br>
+                                    </div>
+                                    <div class="col-lg-6">
+                                      <i class="fas fa-lock"></i><span class="ft">Room Safe</span><br>
+                                      <i class="fas fa-phone-alt"></i><span class="ft">Telephone</span><br>
+                                      <i class="fas fa-shower"></i><span class="ft">Shower - Separate</span><br>
+                                      <i class="fas fa-person-booth"></i><span class="ft">Linen and Towels Provided</span><br>
+                                      <i class="far fa-snowflake"></i><span class="ft"> Air Conditioned</span><br>
+                                      <i class="fas fa-utensils"></i><span class="ft"> Room Services</span><br>
+                                      <i class="fas fa-swimmer"></i><span class="ft">Swimming pool</span><br>
+                                      <i class="fas fa-dumbbell"></i><span class="ft">Gym</span><br>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                      <div class="col-lg-3">
+                        <br>
+                        <div class="bk" align="right">
+                          <p class="rate"> USD 116.14</p>
+                          <button id="rate5" class="btn btn-outline-primary">Show Rate ▼</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="open-rate5">
+                <div class="card-header w-100 border-top">
+                  <div class="container cn3">
+                        <div class="row">
+                          <div class="col-lg-4">
+                            <div>Rates</div>
+                          </div>
+                          <div class="col-lg-3">
+                            <i class="fas fa-user"></i>
+                          </div>
+                          <div class="col-lg-5">
+                            <div>Total</div>
+                          </div>
+                        </div>
+                      </div>
+                   </div>
+                <div class="card-body border-top">
+                  <div class="containter">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-6">
+                         <p class="ctgry">Advance Purchase Room</p>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-3 col-4">
+                          <div class="acpncy">2x <i class="fas fa-user"></i>(Max.)</div>
+                        </div>
+                        <div class="col-lg-2 col-md-1 col-sm-1 col-2">
+                        <a href=""><i class="fas fa-info-circle"></i></a>
+                        </div>
+                        <div class="col-lg-2">
+                          <p class="rate">USD 116.14</p>
+                        </div>
+                        <div class="col-lg-2">
+                          <button class="btn btn-secondary" onclick="window.location.href='process.html'">Book Now</button>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-body border-top">
+                  <div class="containter">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-6">
+                         <p class="ctgry">Non-Refundable Room</p>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-3 col-4">
+                          <div class="acpncy">2x <i class="fas fa-user"></i>(Max.)</div>
+                        </div>
+                        <div class="col-lg-2 col-md-1 col-sm-1 col-2">
+                        <a href=""><i class="fas fa-info-circle"></i></a>
+                        </div>
+                        <div class="col-lg-2">
+                          <p class="rate">USD 123.89</p>
+                        </div>
+                        <div class="col-lg-2">
+                          <button class="btn btn-secondary" onclick="window.location.href='process.html'">Book Now</button>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-body border-top">
+                  <div class="containter">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-6">
+                         <p class="ctgry">Room with Breakfast</p>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-3 col-4">
+                          <div class="acpncy">2x <i class="fas fa-user"></i>(Max.)</div>
+                        </div>
+                        <div class="col-lg-2 col-md-1 col-sm-1 col-2">
+                        <a href=""><i class="fas fa-info-circle"></i></a>
+                        </div>
+                        <div class="col-lg-2">
+                          <p class="rate">USD 145.17</p>
+                        </div>
+                        <div class="col-lg-2">
+                          <button class="btn btn-secondary" onclick="window.location.href='process.html'">Book Now</button>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3">
+            	     <div class="card mt-4">
+                <div class="card-header text-center bg-dark text-white font-weight-bold">
+                  <div>Contact & Location</div>
+                </div>
+                <div class="card-body p-3 cn">
+                  <div class="row">
+                        <div class="col-lg-1">
+                          <i class="fas fa-home"></i>
+                        </div>
+                        <div class="col-lg-10">
+                           <span class="spc">4-Edgerton Road, Lahore, Punjab, 5400, Pakistan</span>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-lg-1">
+                          <i class="fas fa-car"></i>
+                        </div>
+                        <div class="col-lg-10">
+                           <span class="spc">Free Parking, Security Parking, On-site undercover parking</span>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-lg-1">
+                          <i class="fas fa-phone-square-alt"></i>
+                        </div>
+                        <div class="col-lg-10">
+                           <span class="spc">0092111999955</span>
+                        </div>
+                      </div>                      
+                      <div class="row">
+                        <div class="col-lg-1">
+                          <i class="fas fa-phone-square-alt"></i>
+                        </div>
+                        <div class="col-lg-10">
+                           <span class="spc">00921119999555</span>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-lg-1">
+                          <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="col-lg-10">
+                           <span class="spc">
+                          <a href = "mailto:abc@example.com?subject = Feedback&body = Message">
+                            reservations@dreamhotel.com
+                          </a>
+                        </span>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-lg-1">
+                          <i class="fas fa-globe-americas"></i>
+                        </div>
+                        <div class="col-lg-10">                        
+                          <span class="spc">
+                            <a href="http://luxerydreamhotel.web.app">
+                            http://luxerydreamhotel.web.app</a>
+                          </span>
+                        </div>
+                      </div>
+                      <br>
+                  <div class="bk">
+            <!-- Button trigger modal -->
+            <button class="btn btn-outline-primary w-100" type="button" data-toggle="modal" data-target="#exampleModalCenter">
+              Contact Us
+            </button></div>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+              <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">CONTACT US</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true" id="close">&times;</span>
+                    </button>
+                  </div>
+                  <form id="form">
+                    <div class="modal-body">
+                          <p class="dg">Dear Guest, Thank you for your interest in Luxery Dream Hotel. Feel free to send us an email for any queries you may have. Looking forward to hosting you.</p>
+                          <div class="alert" style="display: none; background-color: green; color: white;">Your Message sent Sucessfully</div>
+                         
+                            <div class="form-group">
+                              <label for="formGroupExampleInput">Name *</label>
+                              <input type="text" class="form-control" id="name"  required>
+                            </div>
+                            <div class="form-group">
+                              <label for="formGroupExampleInput">Phone</label>
+                              <input type="text" class="form-control" id="phone" >
+                            </div>
+                            <div class="form-group">
+                              <label for="exampleFormControlInput1">Email *</label>
+                              <input type="email" class="form-control" id="email"  required>
+                            </div>
+                            <div class="form-group">
+                              <label for="exampleFormControlTextarea1">Message *</label>
+                              <textarea class="form-control" id="message" rows="3" required></textarea>
+                            </div>
+                        </div>
+                      <div class="modal-footer">
+
+                      <div class="bk w-100">
+                          <button type="submit" class="btn btn-outline-primary w-100" id="submt">Submit</button>
+                      </div>
+                          <button type="button" class="btn btn-secondary w-100" data-dismiss="modal">Close</button>
+                  </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+                     </div>
+                 </div>
+              </div>
+          </div>
+       </div>
+                     </div>
+                 </div>
+              </div>
+          </div>
+       </div>
+
+  <footer class="footer">
+    <div class="container-fluid">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-12">
+            <div class="paragraph">
+              <p>
+                Located in Lahore, 15 km (27 Mins) from the airport, the Luxus Grand Hotel features free WiFi access, free private parking. Guests can enjoy the on-site multiple cuisine restaurant, gym and swimming pool.<br><br>
+                Each room is fitted with a flat-screen TV with satellite channels. Certain rooms include a sitting area for your convenience. You will find kettle with complimentary tea coffee sachets in the room. The rooms are fitted with a spacious private bathroom with bathrobes for him and her, soft towels, slippers and free toiletries and amenities. You will be welcome with a fruit basket and complimentary mineral water bottles. The rooms are equipped with low noise air conditioning and double glazed windows to block the noise of the city for better comfort while sleeping.<br><br>
+                You will find a 24-hour front desk at the property and 24-hour room service.<br><br>
+                The hotel also provides car rental. Alhamra Arts Center is 400 m from Luxus Grand Hotel, and Lahore Zoo is 0.6 km from the property. The hotel regularly organizes tours to Wagah border parade and heritage sites of Lahore.<br><br>
+                This property also has one of the best-rated locations in Lahore! Guests are happier about it compared to other properties in the area.<br><br>
+                Couples particularly like the location — they rated it 8.9 for a two-person trip at Booking.com<br><br>
+                This property is also rated for the best value in Lahore! Guests are getting more for their money when compared to other properties in this city.<br><br>
+                We speak your language!<br>
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 border-left">
+            <div class="container">
+              <h5>FEATURES</h5>
+              <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+
+                  <p>
+                    24 hour Porterage<br>
+                    24 hour Reception<br>
+                    24 hour Room Service<br>
+                    Broadband Internet Access<br>
+                    Concierge<br>
+                    Conference Facilities<br>
+                    Disabled Access Rooms<br>
+                    Dry Cleaning Service<br>
+                    Games Room<br>
+                    Guest Laundry<br>
+                    Gym<br>
+                  </p>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                  <p>
+                    Hairdresser<br>
+                    In House Movies<br>
+                    Indoor Swimming Pool<br>
+                    Interconnecting Rooms<br>
+                    Lift/Elevator<br>
+                    Non-Smoking Rooms<br>
+                    On Site Restaurant<br>
+                    Pillow Menu<br>
+                    Wheel Chair Access<br>
+                    WiFi Internet<br>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+<footer class="footer2">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg">
+        <p>
+          <a class="term" href="#collapseExample">Terms and Conditions <span class="fa fa-caret-down"></span></a>
+        </p>
+        <div class="card-body1 col-lg-8">
+          <h4>Terms and Conditions</h4>
+          1. Each room is subject to applicable Government Taxes which are 16% per room per night.<br>
+          2. Our check-in time is 1400 hrs. In-case arrival is before 1400 hrs and after 1600 hrs, room will be subject to availability unless guaranteed.<br>
+          If check-in before 0800 hrs, previous night will be charged.
+          3. Our check-out time is 1200 noon and please note that 50% of room rent will be charged in case of late checkout from 1200 noon to 1800hrs. After 1800 hrs full night room rent will be charged.<br>
+          4. All non-guaranteed reservations will be held on a tentative basis, subject to availability unless guaranteed by valid credit card / companyletter or advance deposit.<br>
+          5. Confirmed reservations must be cancelled / amended at least 72 hours prior to arrival to avoid one night NO-SHOW or CANCELLATION charges. Cancellations should be forwarded in writing to our office. In case of no-show, the first night 100% will be charged on agreed rates.<br>
+          6. In case of any query, please contact our Reservation Department.<br>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="js/booking.js"></script>
+  </body>
+  </html>

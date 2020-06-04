@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Booking Rate</title>
+    <link rel="shortcut icon" href="Image/logo.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/booking.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-database.js"></script>
+  </head>
+  <body>
+    
+    
+    <div class="container-fluid cn1">
+      <div class="row">
+        <div class="col-lg-3">
+          <form id="form">
+            <div class="modal-body">
+              <p class="dg">Dear Guest, Thank you for your interest in Luxery Dream Hotel. Feel free to send us an email for any queries you may have. Looking forward to hosting you.</p>
+              <div class="alert" style="display: none; background-color: green; color: white;">Your Message sent Sucessfully</div>
+              
+              <div class="form-group">
+                <label for="formGroupExampleInput">Name *</label>
+                <input type="text" class="form-control" id="name"  required>
+              </div>
+              <div class="form-group">
+                <label for="formGroupExampleInput">Phone</label>
+                <input type="text" class="form-control" id="phone" >
+              </div>
+              <div class="form-group">
+                <label for="exampleFormControlInput1">Email *</label>
+                <input type="email" class="form-control" id="email"  required>
+              </div>
+              <div class="form-group">
+                <label for="exampleFormControlTextarea1">Message *</label>
+                <textarea class="form-control" id="message" rows="3" required></textarea>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <div class="bk w-100">
+                <button type="submit" class="btn btn-outline-primary w-100" id="submt">Submit</button>
+              </div>
+              <button type="button" class="btn btn-secondary w-100" data-dismiss="modal">Close</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="js/booking.js"></script>
+  </body>
+</html>

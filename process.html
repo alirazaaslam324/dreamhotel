@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Booking Process</title>
+  <link rel="shortcut icon" href="Image/logo.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/process.css">
+  <link rel="stylesheet" href="css/calender.css">  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">   
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-database.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>  
+  
+</head>
+<body>
+   <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">DREAM HOTEL</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav ml-auto">
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Language
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#">English</a>
+            <a class="dropdown-item" href="#">Persian</a>
+            <a class="dropdown-item" href="#">French</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+   
+      <div class="container-fluid con">
+        <div class="row">
+          <div class="col-lg-9"><form action="">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="card mt-4">
+                    <div class="card-body">
+                      <div class="callender__container">
+                        <div class="callender__group">
+                          <div class="form-row">
+                            <div class="col-lg-4 col-12 mt-3">
+                              <input class="Callender-input w-100" type="text" placeholder="From" id="inp-1" required >
+                            </div>
+                            <div class="col-lg-4 col-12 mt-3">
+                              <input class="2 Callender-input w-100" type="text" placeholder="To" id="inp-2" required>
+                            </div>
+                            <div class="col-lg-4 col-12 mt-3">
+                              <input class="input-res w-100" type="text" placeholder="Total Days" id="inp-3" required>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="callender">
+                          <div class="callender__content">
+                            <span class="callender__arrow callender__arrow--left">&lsaquo;</span>
+                            <h2 class="callender__month"> September </h2>
+                            <span class="callender__arrow callender__arrow--right">&rsaquo;</span>
+                          </div>
+                          <div class="callender__days">
+                            <div class="callender__day callender__day--name">Mon</div>
+                            <div class="callender__day callender__day--name">Tue</div>
+                            <div class="callender__day callender__day--name">Wed</div>
+                            <div class="callender__day callender__day--name">Thu</div>
+                            <div class="callender__day callender__day--name">Fri</div>
+                            <div class="callender__day callender__day--name">Sat</div>
+                            <div class="callender__day callender__day--name" id="start">Sun</div>
+                          </div>
+                        </div>
+                      </div>
+                      <hr>
+                      <div class="form-row">
+                        <div class="col-lg-3 col-md-6 col-sm-12 col-12 mt-2">
+                          <input type="text" class="form-control" placeholder="Firstname" required>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12 col-12 mt-2">                          
+                          <input type="text" class="form-control" placeholder="Lastname" required>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12 col-12 mt-2">
+                          <select name="" id="" class="form-control" required>
+                            <option value="">Select Room/Suite</option>
+                            <option value="">Delux Double Room</option>
+                            <option value="">Delux Twin Room</option>
+                            <option value="">Executive Double Suite</option>
+                            <option value="">Executive Twin Suite</option>
+                            <option value="">Royal Suite</option>
+                          </select>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12 col-12 mt-2" required>
+                          <select name="" id="" class="form-control">
+                            <option value="">Select Type</option>
+                            <option value="">Advance Perchase Room</option>
+                            <option value="">Non-Refundable Room</option>
+                            <option value="">Room with Breakfast</option>
+                          </select>
+                        </div>                        
+                      </div>                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="card mt-4">
+                    <div class="card-body">                        
+                      <div class="form-row">
+                        <div class="col-lg-6">
+                          <h4>Payment Section</h4>                          
+                        </div>
+                        <div class="col-lg-6">
+                          <h6>Guest Bank Account Details</h6>                          
+                        </div>
+                        <div class="col-lg-12">
+                          <hr>
+                        </div>
+                        <div class="col-lg-6 mt-2">
+                            <input type="text" class="form-control" placeholder="First Name" required>
+                        </div>
+                        <div class="col-lg-6 mt-2">
+                            <input type="text" class="form-control" placeholder="Last Name" required>
+                        </div>
+                        <div class="col-lg-6">
+                        <input type="text" class="form-control" placeholder="Organisation" required>
+                      </div>
+                      <div class="col-lg-6">
+                        <select name="" id="" class="form-control">
+                          <option value="">Estimated Arrival Time</option>
+                          <option value="">12:00 AM (00:00)</option>
+                          <option value="">1:00 AM (01:00)</option>
+                          <option value="">2:00 AM (02:00)</option>
+                          <option value="">3:00 AM (03:00)</option>
+                          <option value="">4:00 AM (04:00)</option>
+                          <option value="">5:00 AM (05:00)</option>
+                          <option value="">6:00 AM (06:00)</option>
+                          <option value="">7:00 AM (07:00)</option>
+                          <option value="">8:00 AM (08:00)</option>
+                          <option value="">9:00 AM (09:00)</option>
+                          <option value="">10:00 AM (10:00)</option>
+                          <option value="">11:00 AM (11:00)</option>
+                          <option value="">12:00 PM (12:00)</option>
+                          <option value="">1:00 PM (13:00)</option>
+                          <option value="">2:00 PM (14:00)</option>
+                          <option value="">3:00 PM (15:00)</option>
+                          <option value="">4:00 PM (16:00)</option>
+                          <option value="">5:00 PM (17:00)</option>
+                          <option value="">6:00 PM (18:00)</option>
+                          <option value="">7:00 PM (19:00)</option>
+                          <option value="">8:00 PM (20:00)</option>
+                          <option value="">9:00 PM (21:00)</option>
+                          <option value="">10:00 PM (22:00)</option>
+                          <option value="">11:00 PM (23:00)</option>
+                        </select>
+                      </div>
+                      <div class="col-lg-6">
+                        <textarea name="" id="" cols="10" rows="5" class="form-control" placeholder="Comments..."></textarea>
+                      </div>
+                      <div class="col-lg-6"></div>
+                      <div class="col-lg-6 mt-2">
+                         <input class="form-check-input ml-1" type="checkbox" required>
+                         <label class="form-check-label ml-4" for="defaultCheck1">
+                          Would you like to receive the newsletter?
+                         </label>
+                      </div>
+                      <div class="col-lg-12">                        
+                        <hr>
+                      </div>
+                      <div class="col-lg-12">
+                        <h6>Payment Details</h6>                        
+                      </div>
+                      <div class="col-lg-6">
+                        <input type="text" class="form-control" placeholder="Name of Card Owner" required>
+                      </div>
+                      <div class="col-lg-6">
+                        <input type="text" class="form-control" placeholder="Card Number" maxlength="24" required>
+                      </div>
+                      <div class="col-lg-6">
+                        <select name="" id="" class="form-control" required>
+                          <option value="">Select Card</option>
+                          <option value="">Visa</option>
+                          <option value="">MasterCard</option>
+                        </select>
+                      </div>
+                      <div class="col-lg-6">
+                       <div class="form-row mt-2 ml-1">
+                        <img src="Image/booking/visa.png" alt="" class="bg p-2">
+                        <img src="Image/booking/mastercard.png" class="bg p-2">
+                      </div>
+                      </div>
+                      <div class="col-lg-4">
+                        <select name="" id="" class="form-control" required>
+                          <option value="">Expire Month</option>
+                          <option value="">1</option>
+                          <option value="">2</option>
+                          <option value="">3</option>
+                          <option value="">4</option>
+                          <option value="">5</option>
+                          <option value="">6</option>
+                          <option value="">7</option>
+                          <option value="">8</option>
+                          <option value="">9</option>
+                          <option value="">10</option>
+                          <option value="">11</option>
+                          <option value="">12</option>
+                        </select>
+                      </div>
+                      <div class="col-lg-4">
+                          <select name="" id="" class="form-control" required>
+                            <option value="">Expire Year</option>
+                            <option value="">2020</option>
+                            <option value="">2021</option>
+                            <option value="">2022</option>
+                            <option value="">2023</option>
+                            <option value="">2024</option>
+                            <option value="">2025</option>
+                            <option value="">2026</option>
+                            <option value="">2027</option>
+                            <option value="">2028</option>
+                            <option value="">2029</option>
+                            <option value="">2030</option>
+                          </select>
+                      </div>
+                      <div class="col-lg-4">
+                        <input type="text" class="form-control" placeholder="CVV Code" maxlength="3" required>
+                      </div>
+                      <div class="col-lg-12">
+                        <br>
+                        <hr>
+                      </div>
+                      <div class="col-lg-12 mt-2">
+                         <input class="form-check-input ml-1" type="checkbox" required>
+                         <label class="form-check-label ml-4" for="defaultCheck1">
+                          <a href="" data-toggle="modal" data-target="#exampleModal">
+                          I have read and accepted the Terms and Conditions</a>
+                         </label>
+
+                          <!-- Modal -->
+                          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title" id="exampleModalLabel">TERMS AND CONDITION</h5>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                                <div class="modal-body text-justify">
+                                1. Each room is subject to applicable Government Taxes which are 16% per room per night.<br>
+                                2. Our check-in time is 1400 hrs. In-case arrival is before 1400 hrs and after 1600 hrs, room will be subject to availability unless guaranteed.<br>
+                                If check-in before 0800 hrs, previous night will be charged.
+                                3. Our check-out time is 1200 noon and please note that 50% of room rent will be charged in case of late checkout from 1200 noon to 1800hrs. After 1800 hrs full night room rent will be charged.<br>
+                                4. All non-guaranteed reservations will be held on a tentative basis, subject to availability unless guaranteed by valid credit card / companyletter or advance deposit.<br>
+                                5. Confirmed reservations must be cancelled / amended at least 72 hours prior to arrival to avoid one night NO-SHOW or CANCELLATION charges. Cancellations should be forwarded in writing to our office. In case of no-show, the first night 100% will be charged on agreed rates.<br>
+                                6. In case of any query, please contact our Reservation Department.<br>
+                                </div>
+                                <div class="modal-footer">
+                                  <button class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>                                
+                              </div>
+                            </div>
+                          </div>
+                      </div>
+                      <div class="col-lg-12">
+                        <br>
+                        <p>This site is protected by reCAPTCHA and the Google <a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a> and <a href="https://policies.google.com/terms" target="_blank">Terms of Service</a> apply.</p>
+                      </div>
+                      <div class="col">
+                        <button class="btn btn-success">Book Now <i class="fa fa-angle-right"></i></button>
+                      </div>
+                    </div>
+                  </div>
+                   
+                </div>
+              </div>
+            </div>
+          </form>
+          </div>
+        </div>
+         <div class="col-lg-3">
+            <div class="container mt-4">
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="card">
+                    <div class="card-header">
+                      <div>Contact & Location</div>
+                    </div>
+                    <div class="card-body cn">
+                      <h6>Luxery Dream Hotel</h6>
+                      <div class="row">
+                        <div class="col-lg-1 col-1">
+                          <i class="fas fa-home"></i>
+                        </div>
+                        <div class="col-lg-10 col-10">
+                           <span class="spc">4-Edgerton Road, Lahore, Punjab, 5400, Pakistan</span>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-lg-1 col-1">
+                          <i class="fas fa-car"></i>
+                        </div>
+                        <div class="col-lg-10 col-10">
+                           <span class="spc">Free Parking, Security Parking, On-site undercover parking</span>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-lg-1 col-1">
+                          <i class="fas fa-phone-square-alt"></i>
+                        </div>
+                        <div class="col-lg-10 col-10">
+                           <span class="spc">0092111999955</span>
+                        </div>
+                      </div>                      
+                      <div class="row">
+                        <div class="col-lg-1 col-1">
+                          <i class="fas fa-phone-square-alt"></i>
+                        </div>
+                        <div class="col-lg-10 col-10">
+                           <span class="spc">00921119999555</span>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-lg-1 col-1">
+                          <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="col-lg-10 col-10">
+                           <span class="spc">
+                          <a href = "mailto:abc@example.com?subject = Feedback&body = Message">
+                            reservations@dreamhotel.com
+                          </a>
+                        </span>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-lg-1 col-1">
+                          <i class="fas fa-globe-americas"></i>
+                        </div>
+                        <div class="col-lg-10 col-10">                        
+                          <span class="spc">
+                            <a href="http://luxerydreamhotel.web.app">
+                            http://luxerydreamhotel.web.app</a>
+                          </span>
+                        </div>
+                      </div>
+                      <br>
+                        <div class="bk">
+                          <!-- Button trigger modal -->
+                          <button class="btn btn-outline-primary w-100" type="button" data-toggle="modal" data-target="#exampleModal1">
+                            Contact Us
+                          </button>
+                        </div>
+                        <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                          <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">CONTACT US</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true" id="close">&times;</span>
+                                </button>
+                              </div>
+                              <form id="form">
+                              <div class="modal-body">
+                                <p class="dg">Dear Guest, Thank you for your interest in Luxery Dream Hotel. Feel free to send us an email for any queries you may have. Looking forward to hosting you.</p>
+                                <div class="alert" style="display: none; background-color: green; color: white;">Your Message sent Sucessfully</div>
+                              
+                                  <div class="form-group">
+                                    <label for="formGroupExampleInput">Name *</label>
+                                    <input type="text" class="form-control" id="name"  required>
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="formGroupExampleInput">Phone</label>
+                                    <input type="text" class="form-control" id="phone" >
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="exampleFormControlInput1">Email *</label>
+                                    <input type="email" class="form-control" id="email"  required>
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="exampleFormControlTextarea1">Message *</label>
+                                    <textarea class="form-control" id="message" rows="3" required></textarea>
+                                  </div>
+                              </div>
+                              <div class="modal-footer"> 
+
+                                <div class="bk w-100">
+                                  <button type="submit" class="btn btn-outline-primary w-100" id="submt">Submit</button>
+                                </div>
+                                  <button type="button" class="btn btn-secondary w-100" data-dismiss="modal">Close</button>
+                              </div></form>
+                            </div>
+                          </div>
+                        </div>
+                    </div>                    
+                  </div>
+                </div>
+              </div>
+            </div>
+         </div>          
+       </div>
+     </div>  
+
+        <footer class="footer">
+          <div class="container-fluid">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-8 col-md-12">
+                  <div class="paragraph">
+                    <p>
+                      Located in Lahore, 15 km (27 Mins) from the airport, the Luxus Grand Hotel features free WiFi access, free private parking. Guests can enjoy the on-site multiple cuisine restaurant, gym and swimming pool.<br><br>
+                      Each room is fitted with a flat-screen TV with satellite channels. Certain rooms include a sitting area for your convenience. You will find kettle with complimentary tea coffee sachets in the room. The rooms are fitted with a spacious private bathroom with bathrobes for him and her, soft towels, slippers and free toiletries and amenities. You will be welcome with a fruit basket and complimentary mineral water bottles. The rooms are equipped with low noise air conditioning and double glazed windows to block the noise of the city for better comfort while sleeping.<br><br>
+                      You will find a 24-hour front desk at the property and 24-hour room service.<br><br>
+                      The hotel also provides car rental. Alhamra Arts Center is 400 m from Luxus Grand Hotel, and Lahore Zoo is 0.6 km from the property. The hotel regularly organizes tours to Wagah border parade and heritage sites of Lahore.<br><br>
+                      This property also has one of the best-rated locations in Lahore! Guests are happier about it compared to other properties in the area.<br><br>
+                      Couples particularly like the location — they rated it 8.9 for a two-person trip at Booking.com<br><br>
+                      This property is also rated for the best value in Lahore! Guests are getting more for their money when compared to other properties in this city.<br><br>
+                      We speak your language!<br>
+                    </p>
+                  </div>
+                </div>
+                <div class="col-lg-4 border-left">
+                  <div class="container">
+                    <h5>FEATURES</h5>
+                    <div class="row">
+                      <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                        <p>
+                          24 hour Porterage<br>
+                          24 hour Reception<br>
+                          24 hour Room Service<br>
+                          Broadband Internet Access<br>
+                          Concierge<br>
+                          Conference Facilities<br>
+                          Disabled Access Rooms<br>
+                          Dry Cleaning Service<br>
+                          Games Room<br>
+                          Guest Laundry<br>
+                          Gym<br>
+                        </p>
+                      </div>
+                      <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                        <p>
+                          Hairdresser<br>
+                          In House Movies<br>
+                          Indoor Swimming Pool<br>
+                          Interconnecting Rooms<br>
+                          Lift/Elevator<br>
+                          Non-Smoking Rooms<br>
+                          On Site Restaurant<br>
+                          Pillow Menu<br>
+                          Wheel Chair Access<br>
+                          WiFi Internet<br>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    </footer>
+    
+<footer class="footer2">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg">
+        <p>
+          <a class="term" href="#collapseExample">Terms and Conditions <span class="fa fa-caret-down"></span></a>
+        </p>
+        <div class="card-body1 col-lg-8">
+          <h4>Terms and Conditions</h4>
+          1. Each room is subject to applicable Government Taxes which are 16% per room per night.<br>
+          2. Our check-in time is 1400 hrs. In-case arrival is before 1400 hrs and after 1600 hrs, room will be subject to availability unless guaranteed.<br>
+          If check-in before 0800 hrs, previous night will be charged.
+          3. Our check-out time is 1200 noon and please note that 50% of room rent will be charged in case of late checkout from 1200 noon to 1800hrs. After 1800 hrs full night room rent will be charged.<br>
+          4. All non-guaranteed reservations will be held on a tentative basis, subject to availability unless guaranteed by valid credit card / companyletter or advance deposit.<br>
+          5. Confirmed reservations must be cancelled / amended at least 72 hours prior to arrival to avoid one night NO-SHOW or CANCELLATION charges. Cancellations should be forwarded in writing to our office. In case of no-show, the first night 100% will be charged on agreed rates.<br>
+          6. In case of any query, please contact our Reservation Department.<br>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  <script src="js/process.js"></script>
+  <script src="js/callender.js"></script>
+</body>
+</html>

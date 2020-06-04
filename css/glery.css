@@ -1,0 +1,47 @@
+.photos .img-fluid 
+{
+    width: 100%;
+    height: 200px;
+    border-radius: 5px;
+    border: 4px solid #D0D3D4;
+    margin: 5% 0%;
+    box-shadow: 0 5px 5px 2px #D7DBDD;
+    opacity: 1;
+    cursor: pointer;
+}
+ 
+.img-fluid:hover
+{
+    transition: 0.5s;
+     transform: scale(1.06);
+     box-shadow: 0 5px 5px 2px #B3B6B7;
+}
+.filter-button
+{
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid #D7DBDD;
+    padding: 1%;
+}
+
+.filter-button:hover
+{
+    
+    
+    color: #DD9933;
+    border-radius: 5px;
+    text-align: center;
+}
+.div
+{
+    background-color: #F2F2F2;
+}
+.displays-2
+{
+color: #DD9933;
+padding-top: 10px; 
+padding-bottom: 10px;
+font-size: 40px;
+text-shadow: 0 1.5px 0 rgba(221, 153, 51, 0.4);
+font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}

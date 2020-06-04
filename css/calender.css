@@ -1,0 +1,177 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+
+.callender {
+  width: 0;
+  opacity: 0;
+  height: 0;    
+  visibility: hidden;
+  position: relative;
+  z-index: 100;
+  white-space: nowrap;
+  transition: width .5s , opacity .2s , transform .5s;  
+}
+
+.callender *::selection {
+    background: none;
+}
+
+.callender__content {
+    background-color: rgb(232, 220, 214);
+    padding: 0rem;
+    text-align: center;
+    border-radius: 5px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    color: rgba(0, 0, 0, 0.53);
+    word-spacing: 4rem;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.callender__month {
+    font-size: 2rem;
+    font-weight: 100;
+    letter-spacing: 5px;
+    padding: .3rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all .2s;
+    
+}
+
+.callender__month:hover {
+    background-color: rgba(222, 192, 177, 0.43);
+    
+}
+
+
+.callender__arrow {
+    cursor: pointer;
+    font-size: 2.5rem;
+    padding: .3rem 1rem;
+    transition: all .2s;
+    border-radius: 4px;
+}
+
+.callender__arrow:hover {
+     background-color: rgba(222, 192, 177, 0.43);
+}
+
+.callender__days {
+    border: 1px solid #959595; 
+    border-top: none;
+    display: grid;
+    grid-template-columns: repeat(7 , 1fr);
+    grid-gap: 5px;
+    padding: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: #fff;
+    
+}
+
+.callender__day , 
+.callender__day--X {
+  background-color: #f4f2f2; 
+  padding: 1vw;
+  text-align: center;
+  transition: all .2s;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.active-day {
+    background-color: rgba(226, 175, 150, 0.73) !important; 
+    color: #fff !important;
+}
+
+
+.callender__day:hover {
+     background-color: rgba(222, 192, 177, 0.43);
+}
+
+.callender__day--name {
+    font-weight: 600;
+}
+
+.callender__day--name:hover {
+    background-color: #f4f2f2;
+}
+
+.Callender-input ,
+.input-res {
+    
+    border: 1px solid #efc100;
+    border-radius: 3px;
+    font-size: 1rem;
+    padding: .5rem;
+    width: 100%;
+    
+    
+
+}
+
+
+.Callender-input:focus ,
+.input-res:focus {
+     border: 1px solid #efc100 !important;
+}
+
+.callender__group select {
+    padding: .5rem;
+}
+
+.callender__group select:not(:last-child) {
+    margin-right: .5rem;
+}
+
+/*
+#Callender-input:focus~.callender {
+    width: 35vw;
+    opacity: 1;
+}
+*/
+
+
+@media only screen and (max-width: 600px) { 
+    .callender__month {
+        padding: .1rem;
+        font-size: 1.4rem;
+        letter-spacing: 2px;
+    }
+    
+    .callender__arrow {
+        font-size: 1.5rem;
+        padding: .1rem .4rem;
+    }
+
+}
+
+@media only screen and (max-width: 992px) { 
+    .callender__group {
+        flex-direction: column;
+    }
+    
+    
+    .callender__group input:focus {
+        border: 3px solid rgba(67, 219, 0, 0.41) !important;
+    }
+    
+    .callender {
+        width: 100% !important;
+        transform: translateY(0)!important;
+    }
+    
+}
+
+
+
+
+
+

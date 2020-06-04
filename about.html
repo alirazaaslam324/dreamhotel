@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Contact</title>
+  <link rel="shortcut icon" href="Image/logo.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/about.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-database.js"></script>
+
+
+</head>
+<body>
+<div class="container-fluid sticky-top">
+        <nav class="navbar navbar-expand-md navbar-light shadow p-1 mb-2 bg-white rounded">
+          <a class="navbar-brand" href="index.html">
+            <img src="Image/hotel-png-logo-3.jpg" alt="logo" width="150">
+          </a>
+          <button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse" data-target="#navb" aria-expanded="false">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+          <div  class="navbar-collapse collapse " id="navb">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item ">
+                <a class="nav-link" href="index.html">HOME</a>
+                <div class="underline"></div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="accommodation.html">ACCOMMODATION</a>
+                <div class="underline"></div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="wellness.html" >WELLNESS</a>
+                <div class="underline"></div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="gallery.html">GALLERY</a>
+                <div class="underline"></div>
+              </li>
+              <li class="nav-item active-link">
+                <a class="nav-link" href="about.html"  style="color: #967A50;">CONTACT</a>
+                <div class="underline"></div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+	<div class="container text-center">
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+				<div class="display-4">GET INTO TOUCH</div></div>
+
+			</div>
+			<hr>
+		</div>
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-6 cl-sx-12">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="text-center">
+                        <div  class="fa fa-map-marker fa-4x"></div><br><br>
+                        <h3>ADDRESS</h3><br>
+                        <p>
+                          Dream Grand Hotel Lahore
+                          <br>
+                          4 Egerton Road, Lahore
+                        </p><br><br>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6 cl-sx-12">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="text-center">
+                        <div class="fa fa-phone fa-4x"></div><br><br>
+                        <h3>PHONE & FAX</h3> <br>
+                        <p>
+                          24/7 Reservation via Phone<br>
+                          Phone: +92-42-111-9999-55<br>
+                          Mobile: +92-320-1999-955<br>
+                          Mobile: +92-341-3711-999<br>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6 cl-sx-12">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="text-center">
+                        <div  class="fa fa-envelope fa-4x"></div><br><br>
+                        <h3>E-MAIL</h3> <br>
+                        <p>
+                          24/7 Reservation via Email<br>
+                          reservations@dreamhotel.com<br>
+                        </p><br><br>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          <div class="container text-center">
+            <div class="row">
+              <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="display-4">PLEASE FILL OUT FORM</div>
+                  <hr class="hr">
+                </div>
+              <div class="col-lg col-md col-sm">
+                
+                
+                <form class="form">
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <input id="name" type="text"  class="form-control" name="text" placeholder="Enter your Name" required="">
+                    </div>
+                    <div class="form-group col-md-6">
+                      <input id="email" type="Email"  class="form-control" name="text" placeholder="Enter your Email" required="">
+                    </div>
+                    <div class="form-group col-md-6">
+                      <input id="city" type="text"  class="form-control" name="text" placeholder="Enter your City" required="">
+                    </div>
+                    <div class="form-group col-md-6">
+                      <input id="ph" type="text"  class="form-control" name="text" placeholder="Your Phone number" required="">
+                    </div>
+                    <div class="form-group col-md-12">
+                      <textarea id="msg" class="form-control" name="" id="" cols="88" rows="10" placeholder="Your Message" required=""></textarea>
+                    </div>
+                    <div class="form-group col-md-12">
+                      <input class="submit" type="submit" value="Submit Enquiry" class="form-control" required="">
+                    </div>
+                  </div>
+                </form>
+                <hr class="hr">
+              </div>
+             </div>
+          </div>    
+<footer>
+            <div class="container text-center">
+                <div class="row">                    
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-xsm-4">
+                        <div class="display-2">CONTACT</div>
+                        <hr class="hr">
+                        <p> Address: 4 Egerton Road, Lahore<br>
+                            Phone +92-42-111-9999-55<br>
+                            Mobile: +92-320-1999-955<br>
+                            Mobile: +92-341-3711-999<br>
+                            Email: reservations@gmail.com</p>  
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-xsm-4">
+                        <div class="display-2 ">EXPLORE</div>
+                        <hr class="hr">
+                        <a class="a" href="index.html"><span>HOME</span></a><br><br>
+                        <a class="a" href="book.html"><span>MAKE RESERVATION ONLINE</span></a><br><br>
+                        <a class="a" href="about.html"><span>CONTACT</span></a><br><br>
+
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-xsm-4">
+                        <div class="display-2">SOCIALIZE</div>
+                        <hr class="hr">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class=" col-lg col-md col-sm col"><a href="http://www.facebook.com/aliraza.aslam.129" target="_blank">
+                                    <i class="fa fa-facebook-square fa-2x"></i></a>
+                                </div>
+                                <div class="col-lg col-md col-sm col"><a href="#">
+                                    <i class="fa fa-instagram fa-2x"></i></a>
+                                </div>
+                                <div class="col-lg col-md col-sm col"><a href="#">
+                                   <i class="fa fa-tripadvisor fa-2x"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+              <div class="row text-center">
+                <div class="col-lg col-md col-sm col-xs">
+                  <hr class="hr">
+                    <div class="Copyright">Copyright 2020 Dream Hotel. Website By Ali-Developers.</div>      
+                </div>
+              </div>
+            </div>
+    </footer>
+
+    <script type="text/javascript" src="js/about.js"></script>  
+</body>
+</html>

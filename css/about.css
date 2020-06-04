@@ -1,0 +1,58 @@
+.card
+{
+	margin: 4% 0%;
+	box-shadow: 0 5px 5px 4px #F2F2F2;
+	border: 1px solid #F2F2F2;
+	border-radius: 5px;
+}
+.card:hover
+{
+	transition: 0.4s;
+	color: #967A50;
+
+}
+
+.form
+{
+	border-radius: 5px;
+	width: 100%;
+	margin: 1% 0%;
+	padding: 2%;
+	box-shadow: 0 0 10px 10px #F2F2F2;
+
+}
+input
+{
+	border: 1px solid black;
+	padding: 3% 5% 3% 5%;
+
+	margin: 3% 1%;
+}
+tr td
+{
+	padding: 1%;
+
+}
+#Message
+{
+
+	height: 150px;
+	width: 101%;
+	
+}
+.submit
+{
+	border: 1px solid grey;
+	background-color: #967A50;
+	color: #ffffff;
+	border-radius: 3px;
+	
+	padding: 2% 4%;
+}
+.submit:hover
+{
+	
+	border: 1px solid #967A50;
+	box-shadow: 0 0 5px 1px #967A50;
+}
+

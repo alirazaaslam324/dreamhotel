@@ -1,0 +1,211 @@
+.con
+{
+	margin: 0;
+}
+.dropdown { 
+    position:static !important; 
+}
+.dropdown-menu { 
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15)!important; 
+    margin-top:0px !important; 
+    width:100% !important; 
+}
+#close
+{
+	font-size: 30px;
+}
+.bar
+{
+	background-color: black;
+	opacity: 0.9;
+	margin-top: -54px;
+	padding: 
+}
+.footer
+{
+	font-size: 13px;
+	background-color: #858889;
+	color: #ffffff;
+	padding: 3% 0%;
+}
+.paragraph
+{
+	text-align: justify;
+}
+.footer2
+{
+	padding: 1% 0%;
+	background-color: #3a3e3e;
+	font-size: 13px;
+
+}
+.footer2 a
+{
+	color: #ffffff;	
+	text-decoration: none;
+}
+.card-body1
+{
+	background-color: #3a3e3e;
+	color: #ffffff;
+	border:0px;
+	
+	display: none;
+
+}
+.term:hover
+{
+	color: #d3d3d3;
+}
+.display-4
+
+{
+	margin: 1% 0%;
+	font-size: 22px;
+	color: #07739F;
+	font-family: "Open Sans", sans-serif;
+}
+
+.cn1
+{
+	background-color: #EAEAEA;
+}
+
+.lead
+{
+	font-size: 15px;
+}
+.alt-heading-primary {
+    color: #07739f;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: 1px solid #ccc;
+    line-height: .1em;
+    margin: 10px 0 30px;  
+}
+
+.alt-heading-primary span {
+    background: #fff;
+    padding: 0 10px;
+}
+.ft
+{
+	padding-left: 15px;
+	font-size: 16px;
+	font-family: "Open Sans", sans-serif;
+}
+.modal-title
+{
+	font-size: 22px;
+	color: #07739F;
+	font-family: "Open Sans", sans-serif;
+}
+.rate
+{
+	font-size: 20px;
+	color: #07739F;
+	font-weight: bold;
+
+}
+
+.bk button
+{
+	border: 1px solid #07739F;
+	color: #07739F;
+}
+.bk button:hover
+{
+	
+	background-color: #07739F;
+}
+
+.card
+{
+	margin: 3% 2%;
+	box-shadow: 0px 4px 10px 5px #BDC3C7;	
+}
+.card-body
+{
+	padding: 2% 0%;
+}
+
+.open-rate1,.open-rate2, .open-rate3, 
+.open-rate4, .open-rate5
+{
+	display: none;		
+}
+.open-rate1 .card-header,.open-rate2 .card-header,
+.open-rate3 .card-header, .open-rate4 .card-header,
+.open-rate5 .card-header
+{		
+	padding: 0% 0% 0% 0%;	
+}
+.open-rate1 .card-body,.open-rate2 .card-body,
+.open-rate3 .card-body, .open-rate4 .card-body,
+.open-rate5 .card-body
+{
+	padding: 1% 0% 0% 0%;		
+}
+
+@media only screen and (max-width: 992px)
+{
+	.bk
+	{
+		text-align: center;		
+	}
+	.rate
+	{
+		display: none;
+
+	}
+	.bk button
+	{
+		width: 100%;
+	}
+	.card-header
+	{
+		display: none;
+	}
+	.btn-secondary
+	{
+		width: 85%;
+	}
+	.open-rate1 .card-body,.open-rate2 .card-body,
+	.open-rate3 .card-body, .open-rate4 .card-body,
+	.open-rate5 .card-body
+	{
+		padding: 1% 0% 2% 0%;
+		text-align: center;
+	}
+	.card
+	{
+		margin: 6% 0%;
+	}
+}
+.ctgry
+{
+	font-weight: bold;
+	padding-top: 5px;
+	text-align: left;
+	padding-left: 20px;
+
+}
+.acpncy
+{
+	font-weight: bold;
+	padding-top: 5px;
+	text-align: left;
+}
+.hd
+{
+	text-align: center;
+}
+.cn span
+{
+	font-size: 13px;
+}
+.dg
+{
+	font-size: 13px;
+}

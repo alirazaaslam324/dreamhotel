@@ -1,0 +1,88 @@
+label a
+{
+	text-decoration: underline;
+	color: #07739F;
+	font-size: 13px;
+
+}
+p
+{
+	font-size: 13px;
+	font-style: italic;
+}
+.form-control
+{
+	margin-top: 2%;
+}
+.modal-header
+{
+	color: #07739F;
+}
+.modal-body
+{
+	font-size: 11px;
+
+
+}
+.cn span
+{
+	font-size: 13px;
+}
+#close
+{
+	font-size: 26px;
+}
+.card
+{
+	margin: 3% 2%;
+	box-shadow: 0px 4px 10px 5px #BDC3C7;	
+}
+.card-body
+{
+	padding: 2% 0%;
+}
+.con
+{
+	background-color: #EAEAEA;
+}
+.bg
+{
+	border: 1px solid #F2F3F4;
+	border-radius: 5px;
+	margin:0% 1%; 
+}
+.footer
+{
+	font-size: 13px;
+	background-color: #858889;
+	color: #ffffff;
+	padding: 3% 0%;
+}
+.paragraph
+{
+	text-align: justify;
+}
+.footer2
+{
+	padding: 1% 0%;
+	background-color: #3a3e3e;
+	font-size: 13px;
+
+}
+.footer2 .term
+{
+	color: #ffffff;	
+	text-decoration: none;
+}
+.card-body1
+{
+	background-color: #3a3e3e;
+	color: #ffffff;
+	border:0px;	
+	display: none;
+
+}
+.term:hover
+{
+	color: #d3d3d3;
+}
